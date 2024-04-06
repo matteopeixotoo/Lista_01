@@ -130,7 +130,6 @@ Questao 11:
 O código feito ficou assim (supondo que int ocupe 2 bytes, utilizei o short para simular):
 
 #include <stdio.h>
-#include <stdio.h>
 
 int main(void){
 
