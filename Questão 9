@@ -1,0 +1,5 @@
+Questao 9:
+A saída retornará erros, que serão:
+  - Definição do vetor nome[] do tipo char dentro do struct teste, sendo que ao tentar acessá-lo, foi usado s->name em vez de s->nome.
+  - A variável x e o vetor nome estão sendo declarados na definição do struct.
+  - Não alocação de memoria para o ponteiro s inicialmente, o que poderia ser feito declarando uma variável da estrutura teste e atribuindo seu endereço ao ponteiro s.
