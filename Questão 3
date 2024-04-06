@@ -1,4 +1,4 @@
-Questao 3:
+Questão 3:
 (LEGAL) p = &i -> o ponteiro de p pode ser atribuído ao endereço de i. 
 (ILEGAL) *q = &j -> &j retorna o endereço de j, que não é do tipo ponteiro, portanto é irregular.
 (LEGAL) p = &*&i -> *&i desreferencia o endereço de i, voltando apenas o valor, porém ainda sobra o "&" do início, fazendo com que o ponteiro p ainda retorne o endereço de i.
