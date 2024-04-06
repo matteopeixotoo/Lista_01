@@ -124,18 +124,18 @@ Questao 11:
 
 ---------------------------
 Questao 12:
- - aloha[2] = value;: Válido. Atribui o valor da variável "value" ao terceiro elemento do array "aloha".
- - scanf("%f", &aloha);: Inválido. A função scanf espera um ponteiro como argumento para armazenar o valor lido, mas aloha é um array e não pode ser usado como um ponteiro.
- - 
- - 
- - 
- - 
- - 
- - 
+ - aloha[2] = value;: Válido. Atribui o valor da variável "value" ao terceiro elemento do vetor "aloha".
+ - scanf("%f", &aloha);: Inválido. A função scanf espera um ponteiro como argumento para armazenar o valor lido, mas aloha é um vetor e não pode ser usado como um ponteiro.
+ - aloha = "value";: Inválido. Dessa forma, "value" será uma string e não poderá ser colocado em um vetor de float.
+ - printf("%f", aloha);: Inválido. Como dito na questão passada, aloha é um vetor de floats, para isso funcionar, teriamos que especificar um dado em específico.
+ - coisas[4][4] = aloha[3];: Válido. Estaríamos atribuindo o conteúdo armazenado na quarta linha do vetor aloha na quinta linha e quinta coluna do vetor coisas (de duas dimensões).
+ - coisas[5] = aloha;: Inválido. Mais uma vez, aloha é um vetor de floats e não poderia ser armazenado na sexta linha de um vetor bidimensional (como podemos perceber, as linhas do vetor coisas tem 5 dados).
+ - pf = value;: Inválido. Como pf é um ponteiro para float e value é só um float. Para funcionar, a função seria "pf = &value", levando o endereço de value ao ponteiro pf, assim atribuindo o valor.
+ - pf = aloha;: Válido. Como pf é um ponteiro para float e aloha é um vetor de floats, o comando funciona e pf aponta para aloha[0].
  
 ---------------------------
 Questao 13:
-  <resposta da questao 2>
+  Memory leak (ou vazamento de memória) é um
 ---------------------------
 Questao 14:
   <resposta da questao 2>
