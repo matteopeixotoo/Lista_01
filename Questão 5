@@ -1,0 +1,9 @@
+Questao 5:
+A função for promove a iteração de i = 0 até i = 4. Para cada iteração:
+
+printf("i = %d",i): Irá imprimir o valor do contador i.
+printf(" vet[%d] = %.1f",i, vet[i]): Irá imprimir o valor do elemento vet[i].
+printf(" *(f + %d) = %.1f",i, *(f+i)): Irá imprimir o valor do elemento acessado através do ponteiro f.
+printf(" &vet[%d] = %X",i, &vet[i]): Irá imprimir o endereço de memória do elemento vet[i].
+printf(" (f + %d) = %X",i, f+i): Irá imprimir o endereço de memória do elemento acessado através do ponteiro f.
+printf("\n"): Irá imprimir uma nova linha para separar as entradas da tabela.
