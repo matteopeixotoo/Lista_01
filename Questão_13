@@ -1,0 +1,68 @@
+Questao 13:
+  Memory leak (ou vazamento de memória) é um problema que se inicia através do gerenciamento incorreto da alocação dinâmica e ocorre quando algum programa não libera para o sistema operacional memória que não é mais utilizada. É comum em C, pois a linguagem não oferece nenhum recurso para gerencia de memória automática.
+
+Primeiro código encontrado:
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int *x = malloc(10 * sizeof(int));
+    printf("Vetor x:\n");
+    for (int i = 0; i < 10; ++i) {
+        x[i] = i * 10;
+        printf("%d ", x[i]);
+    }
+    return 0;
+}
+
+  - Nesse simples código, a memória alocada não é liberada.
+
+Segundo código encontrado:
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int *x = malloc(sizeof(int));
+    int *y = malloc(sizeof(int));
+    int *z = malloc(sizeof(int));
+
+    printf("Ponteiros alocados dinamicamente:\n");
+    *x = 10;
+    *y = 20;
+    *z = 30;
+    printf("x: %d\n", *x);
+    printf("y: %d\n", *y);
+    printf("z: %d\n", *z);
+
+    free(x);
+    free(z);
+    return 0;
+}
+
+  - No segundo, apenas duas alocações são liberadas.
+
+Terceiro código encontrado:
+
+#include <stdio.h>
+#include <stdlib.h>
+
+void simulateMemoryLeakInLoop() {
+    while (1) {
+        int *x = malloc(sizeof(int));
+        if (x == NULL) {
+            printf("Houve uma falha na alocação de memória!\n");
+            return;
+        }
+
+        *x = 42;
+    }
+}
+
+int main() {
+    simulateMemoryLeakInLoop(); 
+    return 0;
+}
+
+  - A memória alocada dinamicamente para o ponteiro x não é liberada dentro do loop, resultando em vazamento de memória contínuo.
