@@ -1,0 +1,2 @@
+Questao 6:
+*(pulo + 2): A expressão refere-se ao valor do terceiro elemento do vetor. Adiciona 2 ao endereço base de pulo e sua saída será o velor contido nesse endereço (o terceiro). A expressão pulo + 2 não retorna o valor, e sim o endereço do terceiro elemento.
