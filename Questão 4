@@ -1,0 +1,15 @@
+Questao 4:
+  <resposta da questao 4 após compilar>
+  20 -> Em /* (a) */, foi atribuído a variável "valor" (defina para o tipo inteiro) o número inteiro 10, p1 aponta para o endereço dessa variável e na próxima linha, o número inteiro 20 é atribuído a *p1, alterando o que está armazenado na variável "valor".
+  29.0 -> Em /* (b) */, foi atribuído a variável "temp" (defina para o tipo ponto flutuante) o número 26.5, p2 aponta para o endereço dessa variável e na próxima linha, o número 29.0 é atribuído a *p2, alterando o que está armazenado na variável "temp" e imprimindo um valor em ponto flutuante com uma casa decimal.
+  P -> Em /* (c) */, "nome" ponteiro para a primeira posição da string "Ponteiros", p3 recebe o endereço da primeira posição da string, imprimindo P.
+  e -> Em /* (d) */, "nome" ponteiro para a primeira posição da string "Ponteiros", p3 recebe o endereço da quinta posição da string, imprimindo e.
+  P -> Em /* (e) */, "nome" ponteiro para a primeira posição da string "Ponteiros", p3 recebe o endereço da primeira posição da string, imprimindo P.
+  e -> Em /* (f) */, p3 + 4 move o ponteiro p3 quatro posições adiante na memória, o que significa que agora p3 aponta para o quinto caractere da string, imprimindo e.
+  t -> Em /* (g) */, o ponteiro p3 que apontava para a quinta posição foi decrementado em uma posição, retornando o valor t.
+  31 -> Em /* (h) */, p4 é declarado como um ponteiro para int, p4 = vetor atribui o endereço do primeiro elemento do array vetor ao ponteiro p4, apontando para vetor[0].
+  45 -> Em /* (i) */, p5 é declarado como um ponteiro para int, p5 = p4 + 1: move o ponteiro p5 para uma posição depois de p4, apontando para vetor[1].
+  27 -> Em /* (j) */, p4 = p5 + 1: move o ponteiro p4 para uma posição depois de p5, atribuindo o valor armazenado no endereço e apontando para vetor[2].
+  31 -> Em /* (l) */, p4 = p4 - 2: retorna o ponteiro p4 a posição da alternativa /* (h) */, apontando para vetor[0].
+  45 -> Em /* (m) */, p5 = &vetor[2] - 1: atribui ao ponteiro p5 o valor armazenado no endereço vetor[1], sendo esse 45.
+  27 -> Em /* (n) */, p5++ incrementa um endereço a mais para o ponteiro p5, que antes estava no endereço do vetor[1], agora passa para o endereço do vetor [2], fazendo com que a saída tenha o valor de 27.
