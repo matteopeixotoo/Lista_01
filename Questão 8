@@ -1,0 +1,12 @@
+Questao 8:
+  1º programa: 
+int vet[] = {4, 9, 13} declara um vetor de tipo inteiro e introduz seus elementos;
+int i irá declarar a variável i que será usada como contador no loop for.
+for vai iterar os elementos do array utilizando a variável i. quando i = 0 retornará o primeiro elemento (4), quando i = 1 retornará o segundo elemento (9) e quando i = 2 retornará o terceiro elemento (13).
+Sendo assim, a saída imprime os elementos do vetor vet separados por espaços (printf("%d ", *(vet+i));).
+
+Saída: 4 9 13 
+  2º programa: 
+Se assemelha ao 1º programa, porém printf("%X ", vet + i) imprimirá o endereço de memória do elemento atual do vetor vet, usando o formato hexadecimal e seguido de um espaço.
+
+Saída: [endereços de memória do primeiro elemento] [endereços de memória do segundo elemento] [endereços de memória do terceiro elemento]
