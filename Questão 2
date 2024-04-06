@@ -1,0 +1,7 @@
+Questao 2:
+  1) p = Endereço de i (p): 4094;
+  2) p+1 = Endereço de i+1 (p+1): 4094 + 2 (tamanho de int em bytes) = 4096.
+  3) *p+2 = O conteúdo do endereço de i somado a 2, ou seja, 5+2 = 7.
+  4) **&p = Retorna o valor que está armazenado no endereço apontado pelo endereço de p, no caso 5.
+  5) 3**p = *p retorna o conteúdo armazendo em i, logo 3 * *p = 3 * 5 = 15.
+  6) **&p+4 = Desreferencia 2x o endereço, retornando o valor de i, logo 5 + 4 = 9.
