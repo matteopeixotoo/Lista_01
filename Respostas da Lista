@@ -94,12 +94,17 @@ Saída: [endereços de memória do primeiro elemento] [endereços de memória do
 ---------------------------
 
 Questao 9:
-A saída retornará erros...
+A saída retornará erros, que serão:
+  - Definição do vetor nome[] do tipo char dentro do struct teste, sendo que ao tentar acessá-lo, foi usado s->name em vez de s->nome.
+  - A variável x e o vetor nome estão sendo declarados na definição do struct.
+  - Não alocação de memoria para o ponteiro s inicialmente, o que poderia ser feito declarando uma variável da estrutura teste e atribuindo seu endereço ao ponteiro s.
 ---------------------------
 
 Questao 10:
-  <resposta da questao 2>
----------------------------
+A saída retornará erros, que serão:
+  - A função main deveria retornar um tipo int, não void.
+  - O valor de x não pode ser modificado pois foi declarado como constante.
+------------------------------------------------------
 
 Questao 11:
  - Se x for declarado como char, cada elemento ocupará 1 byte na memória.
@@ -121,6 +126,72 @@ Questao 11:
     x+1 = 4092 + 8 = 4100
     x+2 = 4092 + 16 = 4108
     x+3 = 4092 + 24 = 4116
+
+O código feito ficou assim (supondo que int ocupe 2 bytes, utilizei o short para simular):
+
+#include <stdio.h>
+int main(){
+  char x1[4];
+  short x2[4];
+  float x3[4];
+  double x4[4];
+
+  printf("Tamanho do char: %lu\n", sizeof(char));
+  printf("Tamanho do int: %lu\n", sizeof(short));
+  printf("Tamanho do float: %lu\n", sizeof(float));
+  printf("Tamanho do double: %lu\n", sizeof(double));
+
+  printf("\nEndereço do char: %p\n", &x1[0]);
+  printf("Endereço do char: %p\n", &x1[0]+1);
+  printf("Endereço do char: %p\n", &x1[0]+2);
+  printf("Endereço do char: %p\n", &x1[0]+3);
+
+  printf("\nEndereço do int: %p\n", &x2[0]);
+  printf("Endereço do int: %p\n", &x2[0]+1);
+  printf("Endereço do int: %p\n", &x2[0]+2);
+  printf("Endereço do int: %p\n", &x2[0]+3);
+  
+  printf("\nEndereço do float: %p\n",&x3[0]);
+  printf("Endereço do float: %p\n",&x3[0]+1);
+  printf("Endereço do float: %p\n",&x3[0]+2);
+  printf("Endereço do float: %p\n",&x3[0]+3);
+  
+  printf("\nEndereço do double: %p\n",&x4[0]);
+  printf("Endereço do double: %p\n",&x4[0]+1);
+  printf("Endereço do double: %p\n",&x4[0]+2);
+  printf("Endereço do double: %p\n",&x4[0]+3);
+
+  return 0;
+}
+
+O resultado de saída encontrado foi:
+
+Tamanho do char: 1
+Tamanho do int: 2
+Tamanho do float: 4
+Tamanho do double: 8
+
+Endereço do char: 0x7fff6f405004
+Endereço do char: 0x7fff6f405005
+Endereço do char: 0x7fff6f405006
+Endereço do char: 0x7fff6f405007
+
+Endereço do int: 0x7fff6f404ffc
+Endereço do int: 0x7fff6f404ffe
+Endereço do int: 0x7fff6f405000
+Endereço do int: 0x7fff6f405002
+
+Endereço do float: 0x7fff6f404fe0
+Endereço do float: 0x7fff6f404fe4
+Endereço do float: 0x7fff6f404fe8
+Endereço do float: 0x7fff6f404fec
+
+Endereço do double: 0x7fff6f404fc0
+Endereço do double: 0x7fff6f404fc8
+Endereço do double: 0x7fff6f404fd0
+Endereço do double: 0x7fff6f404fd8
+
+Observamos então que há um salto de 1 em 1 no endereço de char, de 2 em 2 no endereço de int (supondo que int ocupa 2 bytes), de 4 em 4 no endereço de float e de 8 em 8 para o endereço de double.
 
 ---------------------------
 Questao 12:
