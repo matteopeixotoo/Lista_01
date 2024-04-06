@@ -1,0 +1,4 @@
+Questao 10:
+A saída retornará erros, que serão:
+  - A função main deveria retornar um tipo int, não void.
+  - O valor de x não pode ser modificado pois foi declarado como constante.
