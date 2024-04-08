@@ -5,5 +5,5 @@ Questão 3:
 (ILEGAL) i = (*&)j -> "(*&)" não tem significado em C. O uso de * seguido de "&" cancelaria o efeito do outro, o que não faz sentido em C quando sozinhos.
 (LEGAL) i = *&j -> Com a desreferenciação do endereço j, o valor de j será atribuído a i.
 (LEGAL) i = *&*&j -> Com a dupla desreferenciação do endereço j, o valor de j será atribuído a i.
-(ILEGAL) q = *p -> atribui o valor apontado por p ao ponteiro q.
-(ILEGAL) i = (*p)++ + *q -> ++ só pode ser adicionado para incrementar a uma variável.
+(LEGAL) q = *p -> atribui o valor apontado por p ao ponteiro q.
+(LEGAL) i = (*p)++ + *q -> ++ só pode ser adicionado para incrementar a uma variável.
