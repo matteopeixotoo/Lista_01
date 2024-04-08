@@ -2,4 +2,4 @@ Questao 7:
 - p = mat + 1; é valida pois atribui a p o endereço do segundo elemento do array (mat + 1 calcula o endereço do próximo elemento do array).
 - p = mat; também é válida pois atribui a p o endereço do primeiro elemento do array mat.
 - (?) p = mat; também é válida pois atribui a p o endereço do primeiro elemento do array mat.
-- x = (*mat); atribui a x o valor do primeiro elemento do array mat, portanto, também é válida.
+- x = (*mat); atribui a x o valor do primeiro elemento do array mat, porém a tentativa de desreferenciar o ponteiro mat não é válida.
