@@ -6,4 +6,4 @@ Questão 3:
 (LEGAL) i = *&j -> Com a desreferenciação do endereço j, o valor de j será atribuído a i.
 (LEGAL) i = *&*&j -> Com a dupla desreferenciação do endereço j, o valor de j será atribuído a i.
 (LEGAL) q = *p -> atribui o valor apontado por p ao ponteiro q.
-(LEGAL) i = (*p)++ + *q -> ++ só pode ser adicionado para incrementar a uma variável.
+(LEGAL) i = (*p)++ + *q -> acessa o valor armazenado por p e incrementa, dpois soma com o valor armazenado por q.
