@@ -1,0 +1,59 @@
+/* Geral */
+body{
+		font-family: Helvetica, Arial, sans-serif;
+		color: #229900;
+		margin: 0;
+}
+
+/* Navegação */
+.logo-projeto{
+    display: flex;
+	flex-direction: row;
+    align-items: center;
+    margin-right: 0px;
+}
+
+h1,h2,h3{
+	margin:0;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+.botao{
+	color: #125200;
+	text-decoration: none;
+	padding: 10px 30px;
+	background-color: #3dda10;
+	font-size: .9em;
+	border-radius: 3px;
+}
+
+nav{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #3dda10;
+}
+
+nav > a{
+	text-decoration: none;
+	color: #125200;
+	font-weight: bold;
+	font-size: 28px;
+	font-family: Pacifico, serif;
+}
+
+nav > ul{
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+}
+
+nav ul li{
+	text-align: center;
+	width: 100%;
+	padding: 1%;
+}
+
